@@ -27,14 +27,25 @@ While I do not have Audit Exchange, I was able to test this using version 10 as 
 SET UP
 
 1)  I have attached a zipped file that contains 11 separate scripts.  The files that begin with a “W” should be placed in a folder for bat files.  The other scripts should be copied into Audit Exchange (or into an ACL 10 project.)  In the Audit Exchange file create a table called “EXTRACT_TABLE”.  The EXTRACT_TABLE should be a file with a single record.  The contents of that record are immaterial as the file will be used to EXTRACT values that are captured by variables.
+
 2)	Create an ACL desktop project.  In that project create a table called “EXTRACT_TABLE”.  The EXTRACT_TABLE should be a file with a single record.  The contents of that record are immaterial as the file will be used to EXTRACT values that are captured by variables.
+
 3)	In the SCRIPT VA01_demo_dataonly, you need to change the variables that start with v_path.
+
 a.	V_path_data should be the pathway to a folder  that can be used for the storage of data files.
+
 b.	V_path_batfile should be the pathway to the folder where the “W” series of bat files are saved. 
+
 4)	In the script WA01, WB01, WB02 change the path way for the data file in the EXPORT to the same value used in v_path_data
+
 5)	In the script vA01 change the path way for the batfiles.
+
 6)	In the three scripts with the names that end with “ACL_startup” change:
+
 a.	The pathway for the “ACLwin.exe” to the pathway where the desktop version of ACL resides.
+
 b.	The Pathway and project name of the ACL project created in step 2.
+
 c.	The pathway to where the bat files are saved.
+
 In every script, I have replaced the values that I used when writing the project with notes indicating what value needs to be replaced and where.  To find these places, search for a { or } and it will take you to the values that must be changed on each script.
